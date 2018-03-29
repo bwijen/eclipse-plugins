@@ -142,7 +142,7 @@ typedef void
 // This relies on the linker script to place at correct location in memory.
 
 __attribute__ ((section(".isr_vector"),used))
-pHandler g_pfnVectors[] =
+pHandler __isr_vectors[] =
   {
   // Core Level - CM0
       (pHandler) &_estack, // The initial stack pointer

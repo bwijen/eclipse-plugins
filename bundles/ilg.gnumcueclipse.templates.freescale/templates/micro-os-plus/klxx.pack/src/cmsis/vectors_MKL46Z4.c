@@ -129,7 +129,7 @@ typedef void
 #define CONFIG_4                (pHandler)0xfffffffe
 
 __attribute__ ((section(".isr_vector"),used))
-pHandler gHandlers[] =
+pHandler __isr_vectors[] =
   {
   // Core Level - CM0
       (pHandler) &_estack, // The initial stack pointer
@@ -404,7 +404,7 @@ pHandler gHandlers[] =
     };
 
 __attribute__ ((section(".cfmconfig")))
-pHandler gConfigs[] =
+pHandler __cfmconfigs[] =
   {
   CONFIG_1,
   CONFIG_2,

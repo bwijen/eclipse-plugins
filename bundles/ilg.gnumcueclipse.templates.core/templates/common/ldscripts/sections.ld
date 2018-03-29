@@ -47,6 +47,8 @@ PROVIDE ( _Heap_Limit = __stack - __Main_Stack_Size ) ;
  * since the Cortex-M vector points to it anyway.
  */
 ENTRY(_start)
+EXTERN(__isr_vectors)
+EXTERN(__cfmconfigs)
 
 
 /* Sections Definitions */
